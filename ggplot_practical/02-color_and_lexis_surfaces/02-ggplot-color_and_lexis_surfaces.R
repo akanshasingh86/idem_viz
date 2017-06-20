@@ -30,7 +30,7 @@ library(tidyverse)
 #' We work with data from the [Human Mortality
 #' Database](http://www.mortality.org) -- Swedish period mortality rates by sex.
 
-swe <- read_csv("mortality_surface_sweden.csv")
+swe <- read_csv("https://raw.githubusercontent.com/jschoeley/idem_viz/master/ggplot_practical/02-color_and_lexis_surfaces/mortality_surface_sweden.csv")
 head(swe)
 
 #' Only specifying x and y position and omitting colour puts a grey rectangle at
@@ -78,7 +78,7 @@ swe %>% filter(Sex == "Female") %>%
 #' the `width` and/or `height` of the rectangles. `width` and `height` are
 #' regular aesthetics and can be mapped to variables in the data.
 
-cod <- read_csv("cod.csv")
+cod <- read_csv("https://raw.githubusercontent.com/jschoeley/idem_viz/master/ggplot_practical/02-color_and_lexis_surfaces/cod.csv")
 head(cod)
 
 #' The Cause of Death data features age groups of different sizes (1, 4, or 5
@@ -313,7 +313,8 @@ swe %>%
 #'## Further Reading
 
 #' - [Brilliant color advice from NASA](earthobservatory.nasa.gov/blogs/elegantfigures/2013/08/05/subtleties-of-color-part-1-of-6)
-#' - [Color scale generator](http://vrl.cs.brown.edu/color)
+#' - [Generator for categorical color scales](http://vrl.cs.brown.edu/color)
+#' - [A perceptually uniform continuous color scale](https://www.mrao.cam.ac.uk/~dag/CUBEHELIX/cubetry.html)
 #' - [Color scales for data-viz](colorbrewer2.org)
 #' - Brewer, Cynthia A. 1994. “Guidelines for Use of the Perceptual Dimensions
 #'     of Color for Mapping and Visualization.” In SPIE, edited by Jan Bares,

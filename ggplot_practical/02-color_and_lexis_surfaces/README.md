@@ -37,7 +37,7 @@ Lexis surfaces show the value of a third variable on a period-age-grid. If the v
 For now we will ignore the colouring aspect and just look at how ggplot draws rectangles. \#\#\# 1x1 year data We work with data from the [Human Mortality Database](http://www.mortality.org) -- Swedish period mortality rates by sex.
 
 ``` r
-swe <- read_csv("mortality_surface_sweden.csv")
+swe <- read_csv("https://raw.githubusercontent.com/jschoeley/idem_viz/master/ggplot_practical/02-color_and_lexis_surfaces/mortality_surface_sweden.csv")
 ```
 
     ## Parsed with column specification:
@@ -119,7 +119,7 @@ swe %>% filter(Sex == "Female") %>%
 If our data does not come in single year and age groups we have to adjust the `width` and/or `height` of the rectangles. `width` and `height` are regular aesthetics and can be mapped to variables in the data.
 
 ``` r
-cod <- read_csv("cod.csv")
+cod <- read_csv("https://raw.githubusercontent.com/jschoeley/idem_viz/master/ggplot_practical/02-color_and_lexis_surfaces/cod.csv")
 ```
 
     ## Parsed with column specification:
@@ -436,7 +436,8 @@ Further Reading
 ---------------
 
 -   [Brilliant color advice from NASA](earthobservatory.nasa.gov/blogs/elegantfigures/2013/08/05/subtleties-of-color-part-1-of-6)
--   [Color scale generator](http://vrl.cs.brown.edu/color)
+-   [Generator for categorical color scales](http://vrl.cs.brown.edu/color)
+-   [A perceptually uniform continuous color scale](https://www.mrao.cam.ac.uk/~dag/CUBEHELIX/cubetry.html)
 -   [Color scales for data-viz](colorbrewer2.org)
 -   Brewer, Cynthia A. 1994. “Guidelines for Use of the Perceptual Dimensions of Color for Mapping and Visualization.” In SPIE, edited by Jan Bares, 2171:54–63. <doi:10.1117/12.175328>.
 
@@ -473,16 +474,16 @@ sessionInfo()
     ##  [7] tools_3.4.0        digest_0.6.12      lubridate_1.6.0   
     ## [10] jsonlite_1.4       evaluate_0.10      nlme_3.1-131      
     ## [13] gtable_0.2.0       lattice_0.20-35    rlang_0.1.1       
-    ## [16] psych_1.7.5        DBI_0.6-1          yaml_2.1.14       
-    ## [19] parallel_3.4.0     haven_1.0.0        xml2_1.1.1        
-    ## [22] httr_1.2.1         stringr_1.2.0      knitr_1.16        
-    ## [25] hms_0.3            rprojroot_1.2      grid_3.4.0        
-    ## [28] R6_2.2.1           readxl_1.0.0       foreign_0.8-67    
-    ## [31] rmarkdown_1.5      modelr_0.1.0       reshape2_1.4.2    
-    ## [34] magrittr_1.5       backports_1.1.0    scales_0.4.1      
-    ## [37] htmltools_0.3.6    rvest_0.3.2        assertthat_0.2.0  
-    ## [40] mnormt_1.5-5       colorspace_1.3-2   labeling_0.3      
-    ## [43] stringi_1.1.5      lazyeval_0.2.0     munsell_0.4.3     
-    ## [46] broom_0.4.2
+    ## [16] psych_1.7.5        DBI_0.6-1          curl_2.6          
+    ## [19] yaml_2.1.14        parallel_3.4.0     haven_1.0.0       
+    ## [22] xml2_1.1.1         httr_1.2.1         stringr_1.2.0     
+    ## [25] knitr_1.16         hms_0.3            rprojroot_1.2     
+    ## [28] grid_3.4.0         R6_2.2.1           readxl_1.0.0      
+    ## [31] foreign_0.8-67     rmarkdown_1.5      modelr_0.1.0      
+    ## [34] reshape2_1.4.2     magrittr_1.5       backports_1.1.0   
+    ## [37] scales_0.4.1       htmltools_0.3.6    rvest_0.3.2       
+    ## [40] assertthat_0.2.0   mnormt_1.5-5       colorspace_1.3-2  
+    ## [43] labeling_0.3       stringi_1.1.5      lazyeval_0.2.0    
+    ## [46] munsell_0.4.3      broom_0.4.2
 
 cc-by Jonas Schöley 2017
